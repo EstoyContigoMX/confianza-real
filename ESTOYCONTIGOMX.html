@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Estoy Contigo — Apoya con una propina</title>
+  <meta name="description" content="Dona 5 USD o más y recibe un consejo humano (no generado por IA). Con 10 USD o más, además recibes un mensaje de audio personalizado." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root { color-scheme: light dark; }
+    html, body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+    .glass { backdrop-filter: saturate(140%) blur(8px); background: color-mix(in oklab, white 86%, transparent); }
+    .dark .glass { background: color-mix(in oklab, #111 70%, transparent); }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100">
+  <!-- Header -->
+  <header class="sticky top-0 z-30 border-b border-slate-200/70 dark:border-slate-800/70 bg-white/80 dark:bg-slate-950/80 backdrop-blur">
+    <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="h-8 w-8" aria-hidden="true">
+          <!-- Inline SVG logo -->
+          <svg viewBox="0 0 1024 1024" class="h-8 w-8 fill-[#0f766e]">
+            <defs>
+              <mask id="logo-hug" maskUnits="userSpaceOnUse">
+                <rect x="0" y="0" width="1024" height="1024" fill="black"/>
+                <path fill="white" d="M512,900 L140,470 C95,415 82,335 130,275 C205,181 347,196 420,268 L512,360 L604,268 C677,196 819,181 894,275 C942,335 929,415 884,470 L512,900 Z"/>
+                <path fill="black" d="M980,600 C860,520 720,520 620,600 C520,680 390,700 280,650 C220,620 170,575 140,540 C140,540 160,660 300,730 C460,810 640,770 760,680 C840,620 910,610 980,630 Z"/>
+                <path fill="black" d="M600,585 C645,560 700,560 740,585 C770,603 790,633 792,665 C795,705 770,735 740,755 C715,772 680,770 650,756 C620,742 605,718 602,690 C598,655 580,610 600,585 Z"/>
+                <rect x="615" y="655" rx="14" ry="14" width="160" height="24" fill="black"/>
+                <rect x="610" y="700" rx="14" ry="14" width="150" height="22" fill="black"/>
+                <rect x="600" y="742" rx="14" ry="14" width="130" height="20" fill="black"/>
+              </mask>
+            </defs>
+            <g mask="url(#logo-hug)">
+              <rect width="1024" height="1024" fill="transparent"/>
+              <path d="M512,900 L140,470 C95,415 82,335 130,275 C205,181 347,196 420,268 L512,360 L604,268 C677,196 819,181 894,275 C942,335 929,415 884,470 L512,900 Z"/>
+            </g>
+          </svg>
+        </div>
+        <span class="text-lg font-semibold tracking-tight">Estoy Contigo</span>
+      </div>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#como-funciona" class="hover:opacity-80">Cómo funciona</a>
+        <a href="#niveles" class="hover:opacity-80">Niveles</a>
+        <a href="#formulario" class="hover:opacity-80">Enviar problema</a>
+        <a href="#faq" class="hover:opacity-80">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 -z-10 bg-gradient-to-b from-teal-200/40 via-cyan-100/20 to-transparent dark:from-teal-600/10 dark:via-cyan-600/10 dark:to-transparent"></div>
+    <div class="mx-auto max-w-6xl px-4 py-16 md:py-20">
+      <div class="grid md:grid-cols-2 items-center gap-10">
+        <div>
+          <h1 class="text-4xl md:text-5xl font-extrabold leading-tight tracking-tight">
+            Estoy Contigo. <span class="bg-gradient-to-r from-teal-600 to-cyan-500 bg-clip-text text-transparent">Pequeñas propinas, gran impacto</span>.
+          </h1>
+          <p class="mt-4 text-lg text-slate-600 dark:text-slate-300 max-w-prose">
+            Tu apoyo hoy me ayuda a <strong>pagar mis tarjetas</strong> y a sembrar un <strong>negocio útil para la comunidad</strong>. Puedes dejar una propina de <strong>$150 / $250 MXN</strong> o el monto que prefieras.
+          </p>
+          <div class="mt-6 flex flex-wrap items-center gap-3 text-sm text-slate-600 dark:text-slate-300">
+            <div class="flex items-center gap-2"><span class="i">✅</span> Consejos 100% humanos</div>
+            <div class="flex items-center gap-2"><span class="i">🔒</span> Tu historia es confidencial</div>
+            <div class="flex items-center gap-2"><span class="i">🎧</span> Opción de audio con 10 USD</div>
+          </div>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="#niveles" class="inline-flex items-center justify-center rounded-2xl px-5 py-3 bg-slate-900 text-white dark:bg-white dark:text-slate-900 font-medium hover:opacity-90">Elegir nivel</a>
+            <a href="#formulario" class="inline-flex items-center justify-center rounded-2xl px-5 py-3 border border-slate-300 dark:border-slate-700 font-medium hover:bg-slate-100/60 dark:hover:bg-slate-800/40">Enviar mi problema</a>
+          </div>
+          <p class="mt-4 text-xs text-slate-500 dark:text-slate-400">*Esto no es terapia ni asesoría legal/médica. Es orientación humana basada en experiencia.</p>
+        </div>
+        <div class="">
+          <div class="glass relative rounded-3xl border border-slate-200/70 dark:border-slate-800/70 p-6 shadow-xl">
+            <div class="flex items-center justify-between">
+              <div>
+                <p class="text-sm text-slate-500">Meta mensual</p>
+                <p class="text-2xl font-semibold"><span id="raised">$0</span> / $300</p>
+              </div>
+              <button id="donarRapido" class="rounded-xl bg-teal-600 px-4 py-2 text-white font-semibold hover:opacity-90">Donar rápido</button>
+            </div>
+            <div class="mt-4 w-full h-3 rounded-full bg-slate-200 dark:bg-slate-800 overflow-hidden">
+              <div id="bar" class="h-full w-[0%] bg-gradient-to-r from-teal-600 to-cyan-500"></div>
+            </div>
+            <p class="mt-3 text-xs text-slate-500">Las donaciones ayudan a sostener el tiempo y la energía para responder con cuidado.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Apoyar -->
+  <section id="apoyar" class="mx-auto max-w-6xl px-4 py-10 md:py-14">
+    <h2 class="text-2xl md:text-3xl font-bold tracking-tight">Apoya con una propina</h2>
+    <div class="mt-6 grid md:grid-cols-3 gap-6">
+      <div class="rounded-3xl border border-slate-200 dark:border-slate-800 p-6">
+        <h3 class="text-xl font-semibold">Monto libre</h3>
+        <p class="mt-2 text-slate-600 dark:text-slate-300">Elige cualquier monto con tu método de pago preferido.</p>
+        <a id="payLibre" href="https://link.mercadopago.com.mx/estoycontigomx" target="_blank" class="mt-4 inline-flex w-full items-center justify-center rounded-2xl border border-slate-300 dark:border-slate-700 px-4 py-3 font-semibold hover:bg-slate-100/60 dark:hover:bg-slate-800/40">Apoyar con monto libre</a>
+      </div>
+      <div class="rounded-3xl border border-slate-200 dark:border-slate-800 p-6">
+        <h3 class="text-xl font-semibold">$150 MXN</h3>
+        <p class="mt-2 text-slate-600 dark:text-slate-300">Un impulso que ayuda a cubrir metas semanales.</p>
+        <a id="pay150" href="https://mpago.li/1hEFNiY" target="_blank" class="mt-4 inline-flex w-full items-center justify-center rounded-2xl bg-slate-900 text-white dark:bg-white dark:text-slate-900 px-4 py-3 font-semibold">Apoyar con $150</a>
+      </div>
+      <div class="rounded-3xl border border-slate-200 dark:border-slate-800 p-6">
+        <h3 class="text-xl font-semibold">$250 MXN</h3>
+        <p class="mt-2 text-slate-600 dark:text-slate-300">Súper empujón para llegar a la meta del mes.</p>
+        <a id="pay250" href="https://mpago.li/1vCz8Hi" target="_blank" class="mt-4 inline-flex w-full items-center justify-center rounded-2xl bg-teal-600 text-white px-4 py-3 font-semibold">Apoyar con $250</a>
+      </div>
+    </div>
+    <p class="mt-3 text-xs text-slate-500">Reemplaza los enlaces por tus links de Stripe / Mercado Pago / Ko‑fi.</p>
+  </section>
+
+  <!-- Cómo funciona -->
+  <section id="como-funciona" class="mx-auto max-w-6xl px-4 py-10 md:py-14">
+    <h2 class="text-2xl md:text-3xl font-bold tracking-tight">Cómo funciona</h2>
+    <div class="mt-6 grid md:grid-cols-3 gap-6">
+      <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6">
+        <div class="text-3xl">1️⃣</div>
+        <h3 class="mt-3 font-semibold">Elige tu nivel</h3>
+        <p class="mt-2 text-slate-600 dark:text-slate-300">5 USD = consejo escrito. 10 USD = consejo escrito + audio personalizado.</p>
+      </div>
+      <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6">
+        <div class="text-3xl">2️⃣</div>
+        <h3 class="mt-3 font-semibold">Realiza tu donación</h3>
+        <p class="mt-2 text-slate-600 dark:text-slate-300">Paga mediante tu enlace seguro (Stripe/PayPal/Ko‑fi). Guarda el correo o ID del recibo.</p>
+      </div>
+      <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6">
+        <div class="text-3xl">3️⃣</div>
+        <h3 class="mt-3 font-semibold">Envía tu problema</h3>
+        <p class="mt-2 text-slate-600 dark:text-slate-300">Completa el formulario. Recibirás respuesta humana por correo y, si aplica, un audio.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Niveles -->
+  <section id="niveles" class="mx-auto max-w-6xl px-4 py-10">
+    <h2 class="text-2xl md:text-3xl font-bold tracking-tight">Opcional: Consejo Humano (si quieres consejo escrito/audio)</h2>
+    <div class="mt-6 grid md:grid-cols-2 gap-6">
+      <!-- Plan 5 USD -->
+      <div class="rounded-3xl border border-slate-200 dark:border-slate-800 p-6">
+        <div class="flex items-baseline gap-2">
+          <h3 class="text-xl font-semibold">Consejo Escrito</h3>
+          <span class="rounded-full bg-slate-100 dark:bg-slate-800 px-3 py-1 text-xs">5 USD o más</span>
+        </div>
+        <p class="mt-2 text-slate-600 dark:text-slate-300">Un mensaje escrito y personalizado por una persona (cero IA). Ideal para preguntas puntuales.</p>
+        <ul class="mt-4 space-y-2 text-sm">
+          <li>• Respuesta escrita 150–300 palabras</li>
+          <li>• Tono a elegir: empático / directo / con humor</li>
+          <li>• Entrega por correo</li>
+        </ul>
+        <div class="mt-5 flex gap-3">
+          <button data-tier="5" class="btn-tier w-full rounded-2xl bg-slate-900 text-white dark:bg-white dark:text-slate-900 px-4 py-3 font-semibold">Elegir 5 USD</button>
+          <a id="pay5" href="REEMPLAZA_STRIPE_LINK_5" target="_blank" class="w-full text-center rounded-2xl border border-slate-300 dark:border-slate-700 px-4 py-3 font-semibold hover:bg-slate-100/60 dark:hover:bg-slate-800/40">Pagar ahora</a>
+        </div>
+      </div>
+      <!-- Plan 10 USD -->
+      <div class="rounded-3xl border border-slate-200 dark:border-slate-800 p-6">
+        <div class="flex items-baseline gap-2">
+          <h3 class="text-xl font-semibold">Consejo + Audio</h3>
+          <span class="rounded-full bg-fuchsia-100 text-fuchsia-900 dark:bg-fuchsia-900 dark:text-fuchsia-100 px-3 py-1 text-xs">Más popular</span>
+          <span class="rounded-full bg-slate-100 dark:bg-slate-800 px-3 py-1 text-xs">10 USD o más</span>
+        </div>
+        <p class="mt-2 text-slate-600 dark:text-slate-300">Incluye un mensaje de audio (1–3 min) además del consejo escrito. Perfecto si prefieres escuchar.</p>
+        <ul class="mt-4 space-y-2 text-sm">
+          <li>• Todo lo del nivel anterior</li>
+          <li>• Audio personalizado (MP3 / enlace privado)</li>
+          <li>• Opción de acento/ritmo preferido</li>
+        </ul>
+        <div class="mt-5 flex gap-3">
+          <button data-tier="10" class="btn-tier w-full rounded-2xl bg-slate-900 text-white dark:bg-white dark:text-slate-900 px-4 py-3 font-semibold">Elegir 10 USD</button>
+          <a id="pay10" href="REEMPLAZA_STRIPE_LINK_10" target="_blank" class="w-full text-center rounded-2xl border border-slate-300 dark:border-slate-700 px-4 py-3 font-semibold hover:bg-slate-100/60 dark:hover:bg-slate-800/40">Pagar ahora</a>
+        </div>
+      </div>
+    </div>
+    <p class="mt-3 text-xs text-slate-500">Puedes usar Stripe Payment Links, PayPal, Ko‑fi, Buy Me a Coffee, etc. Reemplaza los enlaces de pago en los botones.</p>
+  </section>
+
+  <!-- Formulario -->
+  <section id="formulario" class="mx-auto max-w-3xl px-4 py-10 md:py-14">
+    <h2 class="text-2xl md:text-3xl font-bold tracking-tight">Cuéntame tu situación</h2>
+    <p class="mt-2 text-slate-600 dark:text-slate-300">Completa el formulario. Si ya pagaste, indica el correo con el que hiciste la donación (o pega el ID/folio del recibo).</p>
+
+    <!-- AVISO: Para producción, cambia action por tu endpoint de formularios (Formspree/Getform/Tally/Zapier). -->
+    <form id="donationForm" method="POST" action="" class="mt-6 space-y-6 rounded-3xl border border-slate-200 dark:border-slate-800 p-6">
+      <input type="hidden" name="tier" id="tierInput" value="5" />
+
+      <div class="grid md:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-sm font-medium">Nombre</label>
+          <input name="name" required class="mt-1 w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2" placeholder="Tu nombre" />
+        </div>
+        <div>
+          <label class="block text-sm font-medium">Email</label>
+          <input name="email" type="email" required class="mt-1 w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2" placeholder="tunombre@email.com" />
+        </div>
+      </div>
+
+      <div>
+        <label class="block text-sm font-medium">Título corto de tu problema</label>
+        <input name="title" maxlength="120" class="mt-1 w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2" placeholder="Ej. Me cuesta decir que no a mi jefe" />
+      </div>
+
+      <div>
+        <div class="flex items-center justify-between">
+          <label class="block text-sm font-medium">Cuéntame los detalles</label>
+          <span id="charCount" class="text-xs text-slate-500">0 / 800</span>
+        </div>
+        <textarea id="problem" name="problem" required minlength="50" maxlength="800" rows="7" class="mt-1 w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2" placeholder="Contexto, qué intentaste, qué esperas, límites, etc."></textarea>
+        <p class="mt-1 text-xs text-slate-500">Mínimo 50 y máximo 800 caracteres para mantenerlo claro y accionable.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-sm font-medium">Tono preferido</label>
+          <select name="tone" class="mt-1 w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2">
+            <option value="empatico">Empático</option>
+            <option value="directo">Directo</option>
+            <option value="con_humor">Con humor</option>
+          </select>
+        </div>
+        <div id="audioPrefs" class="hidden">
+          <label class="block text-sm font-medium">Preferencia de audio</label>
+          <select name="audio_pref" class="mt-1 w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2">
+            <option value="neutral">Neutral</option>
+            <option value="mex">Acento MX</option>
+            <option value="es">Acento ES</option>
+            <option value="latam">Latam suave</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-sm font-medium">Correo o ID del recibo</label>
+          <input name="receipt" required class="mt-1 w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2" placeholder="Email usado en el pago o # de recibo" />
+        </div>
+        <div>
+          <label class="block text-sm font-medium">Nivel elegido</label>
+          <div class="mt-1 grid grid-cols-2 gap-2">
+            <button type="button" data-tier="5" class="btn-tier rounded-xl border border-slate-300 dark:border-slate-700 px-3 py-2 font-medium">5 USD</button>
+            <button type="button" data-tier="10" class="btn-tier rounded-xl border border-slate-300 dark:border-slate-700 px-3 py-2 font-medium">10 USD</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="space-y-2 text-sm">
+        <label class="flex items-start gap-2"><input type="checkbox" required class="mt-1"> <span>Entiendo que esto <strong>no es terapia</strong> ni asesoría legal/médica. Es una opinión humana de buena fe.</span></label>
+        <label class="flex items-start gap-2"><input type="checkbox" required class="mt-1"> <span>Acepto el <a href="#faq" class="underline">aviso de privacidad</a> y el uso de mis datos para responder.</span></label>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <button id="submitBtn" class="rounded-2xl bg-teal-600 px-5 py-3 text-white font-semibold hover:opacity-90">Enviar problema</button>
+        <span id="formMsg" class="text-sm text-slate-500"></span>
+      </div>
+    </form>
+
+    <p class="mt-4 text-xs text-slate-500">⚙️ <strong>Para producción:</strong> reemplaza <code>action=""</code> por tu endpoint (Formspree/Getform/Tally/Zapier) y los enlaces de pago <code>REEMPLAZA_STRIPE_LINK_5</code>/<code>REEMPLAZA_STRIPE_LINK_10</code>.</p>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="mx-auto max-w-6xl px-4 py-12">
+    <h2 class="text-2xl md:text-3xl font-bold tracking-tight">Preguntas frecuentes</h2>
+    <div class="mt-6 grid md:grid-cols-2 gap-6">
+      <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6">
+        <h3 class="font-semibold">¿Cuánto tardan en responder?</h3>
+        <p class="mt-2 text-slate-600 dark:text-slate-300">Generalmente en 24–72 h. Puede variar según la cantidad de historias recibidas. Si necesitas prioridad, menciónalo en el formulario (según disponibilidad).</p>
+      </div>
+      <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6">
+        <h3 class="font-semibold">¿Es 100% humano?</h3>
+        <p class="mt-2 text-slate-600 dark:text-slate-300">Sí. La respuesta y el audio los realiza una persona. No usamos modelos de IA para generarlos.</p>
+      </div>
+      <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6">
+        <h3 class="font-semibold">¿Reembolsos?</h3>
+        <p class="mt-2 text-slate-600 dark:text-slate-300">Las donaciones no son reembolsables. Si no recibes respuesta dentro del plazo estimado, escríbenos para revisarlo y corregirlo.</p>
+      </div>
+      <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6">
+        <h3 class="font-semibold">Privacidad</h3>
+        <p class="mt-2 text-slate-600 dark:text-slate-300">Tu texto se trata como confidencial. No se publica sin tu permiso. Puedes pedir eliminar tus datos en cualquier momento.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-t border-slate-200 dark:border-slate-800">
+    <div class="mx-auto max-w-6xl px-4 py-8 text-sm text-slate-500">
+      Hecho con cariño para dar orientación humana. © <span id="year"></span>
+    </div>
+  </footer>
+
+  <script>
+    // --- Configuración rápida (reemplaza estos enlaces por tus links de pago) ---
+    const PAYMENT_LINK_LIBRE = 'https://link.mercadopago.com.mx/estoycontigomx';
+    const PAYMENT_LINK_150 = 'https://mpago.li/1hEFNiY';
+    const PAYMENT_LINK_250 = 'https://mpago.li/1vCz8Hi';
+
+    const tierInput = document.getElementById('tierInput'); = document.getElementById('tierInput');
+    const audioPrefs = document.getElementById('audioPrefs');
+    const form = document.getElementById('donationForm');
+    const formMsg = document.getElementById('formMsg');
+    const submitBtn = document.getElementById('submitBtn');
+    const charCount = document.getElementById('charCount');
+    const problem = document.getElementById('problem');
+    const raised = document.getElementById('raised');
+    const bar = document.getElementById('bar');
+    const year = document.getElementById('year');
+
+    // Actualiza enlaces de pago
+    const elLibre = document.getElementById('payLibre');
+    const el150 = document.getElementById('pay150');
+    const el250 = document.getElementById('pay250');
+    if (elLibre) elLibre.href = PAYMENT_LINK_LIBRE;
+    if (el150) el150.href = PAYMENT_LINK_150;
+    if (el250) el250.href = PAYMENT_LINK_250;
+    document.getElementById('pay10').href = PAYMENT_LINK_10;
+
+    // Selección de nivel
+    function setTier(val) {
+      tierInput.value = String(val);
+      const isAudio = Number(val) >= 10;
+      audioPrefs.classList.toggle('hidden', !isAudio);
+      // Marca visual en botones
+      document.querySelectorAll('.btn-tier').forEach(b => {
+        const active = b.dataset.tier === String(val);
+        b.classList.toggle('bg-slate-900', active);
+        b.classList.toggle('text-white', active);
+        b.classList.toggle('dark:bg-white', active);
+        b.classList.toggle('dark:text-slate-900', active);
+      });
+      // Guarda preferencia
+      localStorage.setItem('tier', String(val));
+    }
+
+    document.querySelectorAll('.btn-tier').forEach(btn => {
+      btn.addEventListener('click', () => setTier(btn.dataset.tier));
+    });
+
+    // Tier por defecto desde localStorage o 5
+    setTier(localStorage.getItem('tier') || 5);
+
+    // Contador de caracteres
+    function updateChar() { charCount.textContent = `${problem.value.length} / 800`; }
+    problem.addEventListener('input', updateChar); updateChar();
+
+    // Meta de ejemplo (solo demo visual)
+    const demoRaised = Number(localStorage.getItem('raised_demo') || 0);
+    function renderRaised(x){
+      raised.textContent = `$${x}`;
+      bar.style.width = Math.min(100, (x/300)*100) + '%';
+    }
+    renderRaised(demoRaised);
+    document.getElementById('donarRapido').addEventListener('click', () => {
+      const url = PAYMENT_LINK_LIBRE || PAYMENT_LINK_150 || PAYMENT_LINK_250 || '#';
+      window.open(url, '_blank');
+    });
+      renderRaised(now);
+    });
+
+    // Envío del formulario (demo sin backend)
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      submitBtn.disabled = true; formMsg.textContent = 'Enviando…';
+
+      if (!form.action) {
+        // Modo demo: guardamos en localStorage para que puedas probarlo
+        const data = Object.fromEntries(new FormData(form).entries());
+        const list = JSON.parse(localStorage.getItem('submissions_demo') || '[]');
+        list.push({ ...data, date: new Date().toISOString() });
+        localStorage.setItem('submissions_demo', JSON.stringify(list));
+        form.reset(); setTier(5); updateChar();
+        submitBtn.disabled = false; formMsg.textContent = '✅ Recibido (demo). Agrega tu endpoint a action="…" para recibirlo de verdad.';
+        return;
+      }
+
+      try {
+        const resp = await fetch(form.action, { method: 'POST', body: new FormData(form) });
+        if (!resp.ok) throw new Error('Error en el servidor de formularios');
+        form.reset(); setTier(5); updateChar();
+        formMsg.textContent = '✅ Recibido. Te escribiré al correo que dejaste.';
+      } catch (err) {
+        formMsg.textContent = '❌ No se pudo enviar. Intenta de nuevo o escribe por correo.';
+      } finally {
+        submitBtn.disabled = false;
+      }
+    });
+
+    year.textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
