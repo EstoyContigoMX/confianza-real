@@ -3,8 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Estoy Contigo — Retoma el control de tu vida </title>
-  <meta name="description" content="Dona $150 o más y recibe un consejería y apoyo humano (no generado por IA). Con $250 o más, recibirás instrucciones para una sesión completa totalmente personalizada." />
+  <title>Estoy Contigo — Pequeños apoyos, gran impacto</title>
+  <meta name="description" content="Apoya con $50, $150 o $250 MXN (o monto libre) y recibe atención humana: express, chat privado o sesión completa. También hay solicitudes gratis con respuesta 36–72 h." />
+  <meta name="theme-color" content="#0f766e" />
+  <meta name="format-detection" content="telephone=no" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&display=swap" rel="stylesheet">
@@ -22,8 +24,8 @@
     <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
       <div class="flex items-center gap-3">
         <div class="h-8 w-8" aria-hidden="true">
-          <!-- Inline SVG logo -->
-          <svg viewBox="0 0 1024 1024" class="h-8 w-8 fill-[#0f766e]">
+          <!-- Inline SVG logo (teal) -->
+          <svg viewBox="0 0 1024 1024" class="h-8 w-8 fill-[#0f766e]" role="img" aria-label="Estoy Contigo">
             <defs>
               <mask id="logo-hug" maskUnits="userSpaceOnUse">
                 <rect x="0" y="0" width="1024" height="1024" fill="black"/>
@@ -45,362 +47,128 @@
       </div>
       <nav class="hidden md:flex items-center gap-6 text-sm">
         <a href="#como-funciona" class="hover:opacity-80">Cómo funciona</a>
-        <a href="#niveles" class="hover:opacity-80">Niveles</a>
-        <a href="#formulario" class="hover:opacity-80">Enviar problema</a>
+        <a href="#apoyar" class="hover:opacity-80">Apoyos</a>
+        <a href="#formulario" class="hover:opacity-80">Enviar solicitud</a>
         <a href="#faq" class="hover:opacity-80">FAQ</a>
       </nav>
     </div>
   </header>
 
   <!-- Hero -->
-  <section class="relative overflow-hidden">
+  <section class="relative overflow-hidden scroll-mt-20">
     <div class="absolute inset-0 -z-10 bg-gradient-to-b from-teal-200/40 via-cyan-100/20 to-transparent dark:from-teal-600/10 dark:via-cyan-600/10 dark:to-transparent"></div>
     <div class="mx-auto max-w-6xl px-4 py-16 md:py-20">
       <div class="grid md:grid-cols-2 items-center gap-10">
         <div>
           <h1 class="text-4xl md:text-5xl font-extrabold leading-tight tracking-tight">
-            Estoy Contigo. <span class="bg-gradient-to-r from-teal-600 to-cyan-500 bg-clip-text text-transparent">Pequeñas propinas, gran impacto</span>.
+            Estoy Contigo. <span class="bg-gradient-to-r from-teal-600 to-cyan-500 bg-clip-text text-transparent">Pequeños apoyos, gran impacto</span>.
           </h1>
           <p class="mt-4 text-lg text-slate-600 dark:text-slate-300 max-w-prose">
-            Recibe el soporte emocional que necesitas <strong> generado desde una mente humana </strong> y un corazón que late igual que el tuyo <strong> sin contacto con la inteligencia artificial </strong>. Puedes empezar desde las opciones de <strong>$150 / $250 </strong> o el monto que prefieras si quieres que el proyecto llegue a más personas.
+            Recibe apoyo humano y cercano (no generado por IA). Elige <strong>apoyo express ($50)</strong>, una sesión de <strong>$150</strong> o <strong>$250</strong>, o realiza un <strong>donativo</strong> con el monto que prefieras.
           </p>
           <div class="mt-6 flex flex-wrap items-center gap-3 text-sm text-slate-600 dark:text-slate-300">
-            <div class="flex items-center gap-2"><span class="i">✅</span> Consejos 100% humanos</div>
-            <div class="flex items-center gap-2"><span class="i">🔒</span> Tu historia es confidencial</div>
-            <div class="flex items-center gap-2"><span class="i">🎧</span> Te esuchamos y te hablamos personas tangibles, tan cercanas como tú mismx </div>
+            <div class="flex items-center gap-2">✅ Atención 100% humana</div>
+            <div class="flex items-center gap-2">🔒 Tu historia es confidencial</div>
+            <div class="flex items-center gap-2">🎧 Chat o videollamada según tu caso</div>
           </div>
           <div class="mt-8 flex flex-wrap gap-3">
-            <a href="#niveles" class="inline-flex items-center justify-center rounded-2xl px-5 py-3 bg-slate-900 text-white dark:bg-white dark:text-slate-900 font-medium hover:opacity-90">Elegir nivel</a>
-            <a href="#formulario" class="inline-flex items-center justify-center rounded-2xl px-5 py-3 border border-slate-300 dark:border-slate-700 font-medium hover:bg-slate-100/60 dark:hover:bg-slate-800/40">Enviar mi problema</a>
+            <a href="#apoyar" class="inline-flex items-center justify-center rounded-2xl px-5 py-3 bg-slate-900 text-white dark:bg-white dark:text-slate-900 font-medium hover:opacity-90">Elegir apoyo</a>
+            <a href="#formulario" class="inline-flex items-center justify-center rounded-2xl px-5 py-3 border border-slate-300 dark:border-slate-700 font-medium hover:bg-slate-100/60 dark:hover:bg-slate-800/40">Enviar solicitud</a>
           </div>
-          <p class="mt-4 text-xs text-slate-500 dark:text-slate-400">*EstoyContigo no es una plataforma oficial de terapia ni asesoría legal/médica. Es orientación humana basada en experiencia. No obstante, si podemos canalizarte hacia especialistas con precios accesibles en su ejercicio de la salud psicológica</p>
-      <div>
-  <div class="glass relative rounded-3xl border border-slate-200/70 dark:border-slate-800/70 p-6 shadow-xl">
-    <div class="flex items-center justify-between">
-      <p class="text-sm text-slate-500">Gracias por tu apoyo 🙏</p>
-      <button id="donarRapido" class="rounded-xl bg-teal-600 px-4 py-2 text-white font-semibold hover:opacity-90">
-        Donar rápido
-      </button>
-    </div>
-    <p class="mt-3 text-sm text-slate-600 dark:text-slate-300">
-      Cada donativo ayuda a sostener solicitudes gratis (36–72 h) y sesiones de pago. Tu apoyo hace posible esta atención 100% humana.
-    </p>
-  </div>
-</div>
-
-              </div>
+          <p class="mt-4 text-xs text-slate-500 dark:text-slate-400">
+            *No ofrecemos terapia clínica ni asesoría legal/médica. En caso de crisis, contacta servicios de emergencia. Horario de atención express: 10:00–20:00.
+          </p>
+        </div>
+        <div>
+          <!-- Tarjeta simple (sin contador) -->
+          <div class="glass relative rounded-3xl border border-slate-200/70 dark:border-slate-800/70 p-6 shadow-xl">
+            <div class="flex items-center justify-between">
+              <p class="text-sm text-slate-500">Gracias por tu apoyo 🙏</p>
               <button id="donarRapido" class="rounded-xl bg-teal-600 px-4 py-2 text-white font-semibold hover:opacity-90">Donar rápido</button>
             </div>
-            <div class="mt-4 w-full h-3 rounded-full bg-slate-200 dark:bg-slate-800 overflow-hidden">
-              <div id="bar" class="h-full w-[0%] bg-gradient-to-r from-teal-600 to-cyan-500"></div>
-            </div>
-            <p class="mt-3 text-xs text-slate-500">Las donaciones ayudan a sostener el tiempo y la energía para responder con cuidado.</p>
+            <p class="mt-3 text-sm text-slate-600 dark:text-slate-300">
+              Cada donativo ayuda a sostener solicitudes gratis (36–72 h) y sesiones de pago. Tu apoyo hace posible esta atención 100% humana.
+            </p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Apoyar -->
-  <section id="apoyar" class="mx-auto max-w-6xl px-4 py-10 md:py-14">
-    <h2 class="text-2xl md:text-3xl font-bold tracking-tight">Apoya con una propina</h2>
-    <div class="mt-6 grid md:grid-cols-3 gap-6">
+  <!-- Apoyos -->
+  <section id="apoyar" class="mx-auto max-w-6xl px-4 py-10 md:py-14 scroll-mt-20">
+    <h2 class="text-2xl md:text-3xl font-bold tracking-tight">Elige tu apoyo</h2>
+    <div class="mt-6 grid md:grid-cols-4 gap-6">
+      <!-- $50 MXN (Express) -->
       <div class="rounded-3xl border border-slate-200 dark:border-slate-800 p-6">
-        <h3 class="text-xl font-semibold">Monto libre</h3>
-        <p class="mt-2 text-slate-600 dark:text-slate-300">Elige cualquier monto con tu método de pago preferido.</p>
-        <a id="payLibre" href="https://link.mercadopago.com.mx/estoycontigomx" target="_blank" class="mt-4 inline-flex w-full items-center justify-center rounded-2xl border border-slate-300 dark:border-slate-700 px-4 py-3 font-semibold hover:bg-slate-100/60 dark:hover:bg-slate-800/40">Apoyar con monto libre</a>
+        <h3 class="text-xl font-semibold">$50 MXN</h3>
+        <p class="mt-2 text-slate-600 dark:text-slate-300">Interacción express (chat 15–20 min). Respuesta en ≤ 1 h (10:00–20:00).</p>
+        <a id="pay50" href="https://link.mercadopago.com.mx/estoycontigomx" target="_blank" rel="noopener noreferrer"
+           class="mt-4 inline-flex w-full items-center justify-center rounded-2xl bg-teal-600 text-white px-4 py-3 font-semibold">
+          Apoyo express ($50)
+        </a>
+        <p class="mt-2 text-xs text-slate-500">Al abrir Mercado Pago, escribe <strong>50</strong> MXN en el monto.</p>
       </div>
+      <!-- $150 MXN -->
       <div class="rounded-3xl border border-slate-200 dark:border-slate-800 p-6">
         <h3 class="text-xl font-semibold">$150 MXN</h3>
-        <p class="mt-2 text-slate-600 dark:text-slate-300">Un impulso que ayuda a cubrir metas semanales.</p>
-        <a id="pay150" href="https://mpago.li/1hEFNiY" target="_blank" class="mt-4 inline-flex w-full items-center justify-center rounded-2xl bg-slate-900 text-white dark:bg-white dark:text-slate-900 px-4 py-3 font-semibold">Apoyar con $150</a>
+        <p class="mt-2 text-slate-600 dark:text-slate-300">Sesión de chat privada (30–40 min). Agenda en ≤ 24 h.</p>
+        <a id="pay150" href="https://mpago.li/1hEFNiY" target="_blank" rel="noopener noreferrer"
+           class="mt-4 inline-flex w-full items-center justify-center rounded-2xl bg-slate-900 text-white dark:bg-white dark:text-slate-900 px-4 py-3 font-semibold">
+          Apoyo $150
+        </a>
       </div>
+      <!-- $250 MXN -->
       <div class="rounded-3xl border border-slate-200 dark:border-slate-800 p-6">
         <h3 class="text-xl font-semibold">$250 MXN</h3>
-        <p class="mt-2 text-slate-600 dark:text-slate-300">Súper empujón para llegar a la meta del mes.</p>
-        <a id="pay250" href="https://mpago.li/1vCz8Hi" target="_blank" class="mt-4 inline-flex w-full items-center justify-center rounded-2xl bg-teal-600 text-white px-4 py-3 font-semibold">Apoyar con $250</a>
+        <p class="mt-2 text-slate-600 dark:text-slate-300">Sesión completa (40–50 min). Chat o videollamada.</p>
+        <a id="pay250" href="https://mpago.li/1vCz8Hi" target="_blank" rel="noopener noreferrer"
+           class="mt-4 inline-flex w-full items-center justify-center rounded-2xl bg-teal-600 text-white px-4 py-3 font-semibold">
+          Apoyo $250
+        </a>
+      </div>
+      <!-- Monto libre -->
+      <div class="rounded-3xl border border-slate-200 dark:border-slate-800 p-6">
+        <h3 class="text-xl font-semibold">Monto libre</h3>
+        <p class="mt-2 text-slate-600 dark:text-slate-300">Elige cualquier donativo. Nos ayudas a llegar a más personas.</p>
+        <a id="payLibre" href="https://link.mercadopago.com.mx/estoycontigomx" target="_blank" rel="noopener noreferrer"
+           class="mt-4 inline-flex w-full items-center justify-center rounded-2xl border border-slate-300 dark:border-slate-700 px-4 py-3 font-semibold hover:bg-slate-100/60 dark:hover:bg-slate-800/40">
+          Dar apoyo
+        </a>
       </div>
     </div>
-    <p class="mt-3 text-xs text-slate-500">Reemplaza los enlaces por tus links de Stripe / Mercado Pago / Ko‑fi.</p>
   </section>
 
   <!-- Cómo funciona -->
-  <section id="como-funciona" class="mx-auto max-w-6xl px-4 py-10 md:py-14">
+  <section id="como-funciona" class="mx-auto max-w-6xl px-4 py-10 md:py-14 scroll-mt-20">
     <h2 class="text-2xl md:text-3xl font-bold tracking-tight">Cómo funciona</h2>
-    <div class="mt-6 grid md:grid-cols-3 gap-6">
+    <div class="mt-6 grid md:grid-cols-4 gap-6">
+      <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6">
+        <div class="text-3xl">0️⃣</div>
+        <h3 class="mt-3 font-semibold">Solicitud gratis</h3>
+        <p class="mt-2 text-slate-600 dark:text-slate-300">Por tiempo limitado. Respuesta en 36–72 h. 1 solicitud por semana. Sin crisis/terapia clínica.</p>
+      </div>
       <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6">
         <div class="text-3xl">1️⃣</div>
-        <h3 class="mt-3 font-semibold">Elige tu nivel</h3>
-        <p class="mt-2 text-slate-600 dark:text-slate-300">5 USD = consejo escrito. 10 USD = consejo escrito + audio personalizado.</p>
+        <h3 class="mt-3 font-semibold">Express — $50</h3>
+        <p class="mt-2 text-slate-600 dark:text-slate-300">Chat 15–20 min. Respuesta en ≤ 1 h (10:00–20:00). Usa el botón $50 (monto libre).</p>
       </div>
       <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6">
         <div class="text-3xl">2️⃣</div>
-        <h3 class="mt-3 font-semibold">Realiza tu donación</h3>
-        <p class="mt-2 text-slate-600 dark:text-slate-300">Paga mediante tu enlace seguro (Stripe/PayPal/Ko‑fi). Guarda el correo o ID del recibo.</p>
+        <h3 class="mt-3 font-semibold">Chat privada — $150</h3>
+        <p class="mt-2 text-slate-600 dark:text-slate-300">Sesión 30–40 min. Agenda en ≤ 24 h.</p>
       </div>
       <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6">
         <div class="text-3xl">3️⃣</div>
-        <h3 class="mt-3 font-semibold">Envía tu problema</h3>
-        <p class="mt-2 text-slate-600 dark:text-slate-300">Completa el formulario. Recibirás respuesta humana por correo y, si aplica, un audio.</p>
+        <h3 class="mt-3 font-semibold">Sesión completa — $250</h3>
+        <p class="mt-2 text-slate-600 dark:text-slate-300">40–50 min. Chat o videollamada. Decisiones importantes o ideas de peso.</p>
       </div>
     </div>
-  </section>
-
-  <!-- Niveles -->
-  <section id="niveles" class="mx-auto max-w-6xl px-4 py-10">
-    <h2 class="text-2xl md:text-3xl font-bold tracking-tight">Opcional: Consejo Humano (si quieres consejo escrito/audio)</h2>
-    <div class="mt-6 grid md:grid-cols-2 gap-6">
-      <!-- Plan 5 USD -->
-      <div class="rounded-3xl border border-slate-200 dark:border-slate-800 p-6">
-        <div class="flex items-baseline gap-2">
-          <h3 class="text-xl font-semibold">Consejo Escrito</h3>
-          <span class="rounded-full bg-slate-100 dark:bg-slate-800 px-3 py-1 text-xs">5 USD o más</span>
-        </div>
-        <p class="mt-2 text-slate-600 dark:text-slate-300">Un mensaje escrito y personalizado por una persona (cero IA). Ideal para preguntas puntuales.</p>
-        <ul class="mt-4 space-y-2 text-sm">
-          <li>• Respuesta escrita 150–300 palabras</li>
-          <li>• Tono a elegir: empático (siempre de tu lado) / directo (una respuesta crítica basada en los hechos) / con humor (quieres animarte? te cuesta ver el lado postivio? elige esta opción) </li>
-          <li>• Entrega por correo</li>
-        </ul>
-        <div class="mt-5 flex gap-3">
-          <button data-tier="5" class="btn-tier w-full rounded-2xl bg-slate-900 text-white dark:bg-white dark:text-slate-900 px-4 py-3 font-semibold">Elegir 5 USD</button>
-          <a id="pay5" href="REEMPLAZA_STRIPE_LINK_5" target="_blank" class="w-full text-center rounded-2xl border border-slate-300 dark:border-slate-700 px-4 py-3 font-semibold hover:bg-slate-100/60 dark:hover:bg-slate-800/40">Pagar ahora</a>
-        </div>
-      </div>
-      <!-- Plan 10 USD -->
-      <div class="rounded-3xl border border-slate-200 dark:border-slate-800 p-6">
-        <div class="flex items-baseline gap-2">
-          <h3 class="text-xl font-semibold">Consejo + Audio</h3>
-          <span class="rounded-full bg-fuchsia-100 text-fuchsia-900 dark:bg-fuchsia-900 dark:text-fuchsia-100 px-3 py-1 text-xs">Más popular</span>
-          <span class="rounded-full bg-slate-100 dark:bg-slate-800 px-3 py-1 text-xs">10 USD o más</span>
-        </div>
-        <p class="mt-2 text-slate-600 dark:text-slate-300">Incluye un mensaje de audio (1–3 min) además del consejo escrito. Perfecto si prefieres escuchar.</p>
-        <ul class="mt-4 space-y-2 text-sm">
-          <li>• Todo lo del nivel anterior</li>
-          <li>• Atención personalizada ( enlace privado)</li>
-          <li>• Opción de agendar una nueva sesión con precio especial </li>
-        </ul>
-        <div class="mt-5 flex gap-3">
-          <button data-tier="10" class="btn-tier w-full rounded-2xl bg-slate-900 text-white dark:bg-white dark:text-slate-900 px-4 py-3 font-semibold">Elegir 10 USD</button>
-          <a id="pay10" href="REEMPLAZA_STRIPE_LINK_10" target="_blank" class="w-full text-center rounded-2xl border border-slate-300 dark:border-slate-700 px-4 py-3 font-semibold hover:bg-slate-100/60 dark:hover:bg-slate-800/40">Pagar ahora</a>
-        </div>
-      </div>
-    </div>
-    <p class="mt-3 text-xs text-slate-500">Puedes usar Stripe Payment Links, PayPal, Ko‑fi, Buy Me a Coffee, etc. Reemplaza los enlaces de pago en los botones.</p>
   </section>
 
   <!-- Formulario -->
-  <section id="formulario" class="mx-auto max-w-3xl px-4 py-10 md:py-14">
-    <h2 class="text-2xl md:text-3xl font-bold tracking-tight">Cuéntame tu situación</h2>
-    <p class="mt-2 text-slate-600 dark:text-slate-300">Completa el formulario. Si ya pagaste, indica el correo con el que hiciste la donación (o pega el ID/folio del recibo).</p>
+  <section id="formulario" class="mx-auto max-w-3xl px-4 py-10 md:py-14 scroll-mt-20">
+    <h2 class="text-2xl md:text-3xl font-bold tracking-tight">Enviar solicitud</h2>
+    <p class="mt-2 text-slate-600 dark:text-slate-300">Completa el formulario. Si ya hiciste un donativo, indica el correo con el que pagaste o pega el ID/folio del recibo.</p>
 
-    <!-- AVISO: Para producción, cambia action por tu endpoint de formularios (Formspree/Getform/Tally/Zapier). -->
-    <form id="donationForm" method="POST" action="" class="mt-6 space-y-6 rounded-3xl border border-slate-200 dark:border-slate-800 p-6">
-      <input type="hidden" name="tier" id="tierInput" value="5" />
-
-      <div class="grid md:grid-cols-2 gap-4">
-        <div>
-          <label class="block text-sm font-medium">Nombre</label>
-          <input name="name" required class="mt-1 w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2" placeholder="Tu nombre" />
-        </div>
-        <div>
-          <label class="block text-sm font-medium">Email</label>
-          <input name="email" type="email" required class="mt-1 w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2" placeholder="tunombre@email.com" />
-        </div>
-      </div>
-
-      <div>
-        <label class="block text-sm font-medium">Título corto de tu problema</label>
-        <input name="title" maxlength="120" class="mt-1 w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2" placeholder="Ej. Me cuesta decir que no a mi jefe" />
-      </div>
-
-      <div>
-        <div class="flex items-center justify-between">
-          <label class="block text-sm font-medium">Cuéntame los detalles</label>
-          <span id="charCount" class="text-xs text-slate-500">0 / 800</span>
-        </div>
-        <textarea id="problem" name="problem" required minlength="50" maxlength="800" rows="7" class="mt-1 w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2" placeholder="Contexto, qué intentaste, qué esperas, límites, etc."></textarea>
-        <p class="mt-1 text-xs text-slate-500">Mínimo 50 y máximo 800 caracteres para mantenerlo claro y accionable.</p>
-      </div>
-
-      <div class="grid md:grid-cols-2 gap-4">
-        <div>
-          <label class="block text-sm font-medium">Tono preferido</label>
-          <select name="tone" class="mt-1 w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2">
-            <option value="empatico">Empático</option>
-            <option value="directo">Directo</option>
-            <option value="con_humor">Con humor</option>
-          </select>
-        </div>
-        <div id="audioPrefs" class="hidden">
-          <label class="block text-sm font-medium">Preferencia de audio</label>
-          <select name="audio_pref" class="mt-1 w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2">
-            <option value="neutral">Neutral</option>
-            <option value="mex">Acento MX</option>
-            <option value="es">Acento ES</option>
-            <option value="latam">Latam suave</option>
-          </select>
-        </div>
-      </div>
-
-      <div class="grid md:grid-cols-2 gap-4">
-        <div>
-          <label class="block text-sm font-medium">Correo o ID del recibo</label>
-          <input name="receipt" required class="mt-1 w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2" placeholder="Email usado en el pago o # de recibo" />
-        </div>
-        <div>
-          <label class="block text-sm font-medium">Nivel elegido</label>
-          <div class="mt-1 grid grid-cols-2 gap-2">
-            <button type="button" data-tier="5" class="btn-tier rounded-xl border border-slate-300 dark:border-slate-700 px-3 py-2 font-medium">5 USD</button>
-            <button type="button" data-tier="10" class="btn-tier rounded-xl border border-slate-300 dark:border-slate-700 px-3 py-2 font-medium">10 USD</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="space-y-2 text-sm">
-        <label class="flex items-start gap-2"><input type="checkbox" required class="mt-1"> <span>Entiendo que esto <strong>no es terapia</strong> ni asesoría legal/médica. Es una opinión humana de buena fe.</span></label>
-        <label class="flex items-start gap-2"><input type="checkbox" required class="mt-1"> <span>Acepto el <a href="#faq" class="underline">aviso de privacidad</a> y el uso de mis datos para responder.</span></label>
-      </div>
-
-      <div class="flex items-center gap-3">
-        <button id="submitBtn" class="rounded-2xl bg-teal-600 px-5 py-3 text-white font-semibold hover:opacity-90">Enviar problema</button>
-        <span id="formMsg" class="text-sm text-slate-500"></span>
-      </div>
-    </form>
-
-    <p class="mt-4 text-xs text-slate-500">⚙️ <strong>Para producción:</strong> reemplaza <code>action=""</code> por tu endpoint (Formspree/Getform/Tally/Zapier) y los enlaces de pago <code>REEMPLAZA_STRIPE_LINK_5</code>/<code>REEMPLAZA_STRIPE_LINK_10</code>.</p>
-  </section>
-
-  <!-- FAQ -->
-  <section id="faq" class="mx-auto max-w-6xl px-4 py-12">
-    <h2 class="text-2xl md:text-3xl font-bold tracking-tight">Preguntas frecuentes</h2>
-    <div class="mt-6 grid md:grid-cols-2 gap-6">
-      <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6">
-        <h3 class="font-semibold">¿Cuánto tardan en responder?</h3>
-        <p class="mt-2 text-slate-600 dark:text-slate-300">Generalmente en 24–72 h. Puede variar según la cantidad de historias recibidas. Si necesitas prioridad, menciónalo en el formulario (según disponibilidad).</p>
-      </div>
-      <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6">
-        <h3 class="font-semibold">¿Es 100% humano?</h3>
-        <p class="mt-2 text-slate-600 dark:text-slate-300">Sí. La respuesta y el audio los realiza una persona. No usamos modelos de IA para generarlos.</p>
-      </div>
-      <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6">
-        <h3 class="font-semibold">¿ Cual es la política de Reembolsos?</h3>
-        <p class="mt-2 text-slate-600 dark:text-slate-300">Las donaciones no son reembolsables. Si no recibes respuesta dentro del plazo estimado, escríbenos para revisarlo y corregirlo.</p>
-      </div>
-      <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6">
-        <h3 class="font-semibold">Privacidad</h3>
-        <p class="mt-2 text-slate-600 dark:text-slate-300">Toda la infromación tratada en tu sesión es confidencial. No se publica sin tu permiso. Puedes pedir eliminar tus datos en cualquier momento.</p>
-      </div>
-    </div>
-  </section>
-
-  <footer class="border-t border-slate-200 dark:border-slate-800">
-    <div class="mx-auto max-w-6xl px-4 py-8 text-sm text-slate-500">
-      Hecho con cariño, desde la experiencia y la curiosidad, para dar orientación humana. © <span id="year"></span>
-    </div>
-  </footer>
-
-  <script>
-    // --- Configuración rápida (reemplaza estos enlaces por tus links de pago) ---
-    const PAYMENT_LINK_LIBRE = 'https://link.mercadopago.com.mx/estoycontigomx';
-    const PAYMENT_LINK_150 = 'https://mpago.li/1hEFNiY';
-    const PAYMENT_LINK_250 = 'https://mpago.li/1vCz8Hi';
-
-    const tierInput = document.getElementById('tierInput'); = document.getElementById('tierInput');
-    const audioPrefs = document.getElementById('audioPrefs');
-    const form = document.getElementById('donationForm');
-    const formMsg = document.getElementById('formMsg');
-    const submitBtn = document.getElementById('submitBtn');
-    const charCount = document.getElementById('charCount');
-    const problem = document.getElementById('problem');
-    const raised = document.getElementById('raised');
-    const bar = document.getElementById('bar');
-    const year = document.getElementById('year');
-
-    // Actualiza enlaces de pago
-    const elLibre = document.getElementById('payLibre');
-    const el150 = document.getElementById('pay150');
-    const el250 = document.getElementById('pay250');
-    if (elLibre) elLibre.href = PAYMENT_LINK_LIBRE;
-    if (el150) el150.href = PAYMENT_LINK_150;
-    if (el250) el250.href = PAYMENT_LINK_250;
-    document.getElementById('pay10').href = PAYMENT_LINK_10;
-
-    // Selección de nivel
-    function setTier(val) {
-      tierInput.value = String(val);
-      const isAudio = Number(val) >= 10;
-      audioPrefs.classList.toggle('hidden', !isAudio);
-      // Marca visual en botones
-      document.querySelectorAll('.btn-tier').forEach(b => {
-        const active = b.dataset.tier === String(val);
-        b.classList.toggle('bg-slate-900', active);
-        b.classList.toggle('text-white', active);
-        b.classList.toggle('dark:bg-white', active);
-        b.classList.toggle('dark:text-slate-900', active);
-      });
-      // Guarda preferencia
-      localStorage.setItem('tier', String(val));
-    }
-
-    document.querySelectorAll('.btn-tier').forEach(btn => {
-      btn.addEventListener('click', () => setTier(btn.dataset.tier));
-    });
-
-    // Tier por defecto desde localStorage o 5
-    setTier(localStorage.getItem('tier') || 5);
-
-    // Contador de caracteres
-    function updateChar() { charCount.textContent = `${problem.value.length} / 800`; }
-    problem.addEventListener('input', updateChar); updateChar();
-
-    // Meta de ejemplo (solo demo visual)
-    const demoRaised = Number(localStorage.getItem('raised_demo') || 0);
-    function renderRaised(x){
-      raised.textContent = `$${x}`;
-      bar.style.width = Math.min(100, (x/300)*100) + '%';
-    }
-    renderRaised(demoRaised);
-    document.getElementById('donarRapido').addEventListener('click', () => {
-      const url = PAYMENT_LINK_LIBRE || PAYMENT_LINK_150 || PAYMENT_LINK_250 || '#';
-      window.open(url, '_blank');
-    });
-      renderRaised(now);
-    });
-
-    // Envío del formulario (demo sin backend)
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      submitBtn.disabled = true; formMsg.textContent = 'Enviando…';
-
-      if (!form.action) {
-        // Modo demo: guardamos en localStorage para que puedas probarlo
-        const data = Object.fromEntries(new FormData(form).entries());
-        const list = JSON.parse(localStorage.getItem('submissions_demo') || '[]');
-        list.push({ ...data, date: new Date().toISOString() });
-        localStorage.setItem('submissions_demo', JSON.stringify(list));
-        form.reset(); setTier(5); updateChar();
-        submitBtn.disabled = false; formMsg.textContent = '✅ Recibido (demo). Agrega tu endpoint a action="…" para recibirlo de verdad.';
-        return;
-      }
-
-      try {
-        const resp = await fetch(form.action, { method: 'POST', body: new FormData(form) });
-        if (!resp.ok) throw new Error('Error en el servidor de formularios');
-        form.reset(); setTier(5); updateChar();
-        formMsg.textContent = '✅ Recibido. Te escribiré al correo que dejaste.';
-      } catch (err) {
-        formMsg.textContent = '❌ No se pudo enviar. Intenta de nuevo o escribe por correo.';
-      } finally {
-        submitBtn.disabled = false;
-      }
-    });
- 
-    year.textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
-
-
-
-
+    <!-- AVISO: Para producción, cambia action por tu endpoint de formularios (Formspree/Getf
